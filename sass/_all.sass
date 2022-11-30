@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+$color-main: #48BD85
+$color-sec: #232323
+$color-thr: #3D3D3D
+$color-bg: #1F1F1F
+$font: 'Poppins', sans-serif
+
+body
+    background-color: $color-bg
+    font-family: Poppins
+    width: 100%
+    overflow: scroll
+    
+body::-webkit-scrollbar-thumb 
+    background-color: #47BC82
+    outline: 1px solid #47BC82
+    border-radius: 10px
+body::-webkit-scrollbar 
+    width: 0.75em
+    background-color: #131212
+
+%center
+    display: flex
+    justify-content: center
+
+@mixin custom-container ($h, $bg)
+    height: $h
+    background-color: $bg
+    position: relative
+
+.custom-container 
+    @include custom-container ($h: 140vh, $bg: none)
+        
+.custom-container2
+    @include custom-container($h: 145vh, $bg: #232323)
+
+.custom-container3
+    @include custom-container($h: 80vh, $bg: #47BC82)
+
+h1
+    color: #48BD85
+h2
+    color: #47BC82
+
+.margin
+    margin-left: 3%
+    margin-right: 3%
+    position: inherit
+
+// 600px n down -> phones
+// 600px -> potrait tablets & large phones
+// 768px -> landscape tablets
+// 992px -> laptops/dekstops
+// 1200px -> large screens
+
+@media (max-width: 767px) 
+    .nav-buttons
+        display: none !important
+
+
+// @media (max-width: 767px)
+//     .nav-buttons
+//         display: none
+
+@media (min-width: 768px)
+    .nav-buttons2
+        display: none
+
+
+    @media (max-width: 768px)
+    .custom-container
+        margin-left: 1%
+        margin-right: 1%
+    // .custom-container2
+    //     margin-left: 5%
+    //     margin-right: 5%
+
+    // @media (min-width: 993px)
+    // .custom-container
+    //     margin-left: 3%
+    //     margin-right: 3%
+    // .custom-container2
+    //     margin-left: 3%
+    //     margin-right: 3%
+
+    // @media (max-width: 767px)
+    // .custom-container
+    //     margin-left: 3%
+    //     margin-right: 3%
+    // .custom-container2
+    //     margin-left: 3%
+    //     margin-right: 3% 
+ 
+
