@@ -623,4 +623,9 @@ footer .footer-div p {
   color: #1F1F1F;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=main.css.map */
